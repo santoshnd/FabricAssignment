@@ -19,6 +19,19 @@
             canvasA.setWidth(600);
             canvasA.setHeight(300);
 
+            //draw circle on canvas1
+            var circle1 = new fabric.Circle({
+               radius: 80, fill: 'green', left: 400, top: 150
+            });
+
+            //draw rect on canvas1
+            var rect1 = new fabric.Rect({
+               width: 200, height: 150, fill: 'white', left: 150, top: 150,
+               stroke: 'rgba(255,0,0,1)',strokeWidth: 5
+            });
+
+            canvasA.add(circle1,rect1);            
+
             //create canvasB
             var canvasB = new fabric.Canvas('canvb');
             canvasB.setWidth(600);
