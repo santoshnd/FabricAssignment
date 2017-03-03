@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>Fabric JS Test Application</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.1.0/fabric.all.min.js" ></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+     <div id="mainDiv" align="center">
+       <canvas id="canva" style="border:1px solid green;" ></canvas>
+       <br><br>
+       <canvas id="canvb" style="border:1px solid red"></canvas>
+     </div>
+     <script>
+         $(document).ready(function(){
+
+            //create canvasA
+            var canvasA = new fabric.Canvas('canva');
+            canvasA.setWidth(600);
+            canvasA.setHeight(300);
+
+            //create canvasB
+            var canvasB = new fabric.Canvas('canvb');
+            canvasB.setWidth(600);
+            canvasB.setHeight(300);
+
+         });
+     </script>
+
+  </body>  
+</html>
