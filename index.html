@@ -18,24 +18,40 @@
             var canvasA = new fabric.Canvas('canva');
             canvasA.setWidth(600);
             canvasA.setHeight(300);
+     
+            //create canvas A label
+            var labelA = new fabric.Text('Canvas A', {
+			      left: 100,
+			      top: 30,
+            selectable: false	
+		        });
 
-            //draw circle on canvas1
+            //create a circle object
             var circle1 = new fabric.Circle({
                radius: 80, fill: 'green', left: 400, top: 150
             });
 
-            //draw rect on canvas1
+            //create a  rectangle object
             var rect1 = new fabric.Rect({
                width: 200, height: 150, fill: 'white', left: 150, top: 150,
                stroke: 'rgba(255,0,0,1)',strokeWidth: 5
             });
 
-            canvasA.add(circle1,rect1);            
+            canvasA.add(labelA,circle1,rect1);            
 
             //create canvasB
             var canvasB = new fabric.Canvas('canvb');
             canvasB.setWidth(600);
             canvasB.setHeight(300);
+
+            //create canvas B label
+            var labelB = new fabric.Text('Canvas B', {
+			      left: 100,
+			      top: 30,
+            selectable: false	
+		        });            
+
+            canvasB.add(labelB);
 
          });
      </script>
