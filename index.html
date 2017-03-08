@@ -6,11 +6,16 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   </head>
   <body>
-     <div id="mainDiv" align="center">
+     <div id="mainDiv" align="center" >
+       
        <canvas id="canva" style="border:1px solid green;" ></canvas>
        <br><br>
+       <button id= "moveobj"> Move Selected Item from Canvas A to Canvas B </button>
+       <br></br>
        <canvas id="canvb" style="border:1px solid red"></canvas>
+       
      </div>
+      
      <script>
          $(document).ready(function(){
 
@@ -53,7 +58,15 @@
 
             canvasB.add(labelB);
 
-         });
+            //add object move functionality
+            $("#moveobj").click(function(){
+                var selectedObj = canvasA.getActiveObject();
+                canvasA.remove(selectedObj);
+                canvasB.add(selectedObj);
+
+            });
+
+            });
      </script>
 
   </body>  
